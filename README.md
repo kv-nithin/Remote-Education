@@ -4,7 +4,7 @@ This is a very simple example quiz application that uses a Loopback generated ex
 
 As more and more learning and collaboration moves online, developers will start to build microservices for distance learning. In this case a simple quiz app. The starter kit could easily be remixed into a short essay app, a grading app, or other education tool. Loopback is an open source tool for quickly building a data api for your applications. Whatever your specific application does, using loopback gets you quickly writing application logic and not writing data handling code.
 
-![quiz app pic](./imgages/Picture1.png)
+![quiz app pic](./images/Picture1.png)
 
 ## Learning objectives
 
@@ -16,7 +16,7 @@ Completing this tutorial should take about 30 minutes
 
 ## Architecture diagram
 
-![architecture diagram](./imgages/Picture2.png)
+![architecture diagram](./images/Picture2.png)
 
 ## Getting started
 
@@ -37,16 +37,16 @@ Clone the above repository .
 ibmcloud login
 ```
 The output should be like below-
-![output 1](./imgages/Picture3.png)
+![output 1](./images/Picture3.png)
 
 2)
 ```
 ibmcloud login –sso
 ```
-![output 2](./imgages/Picture4.png)
+![output 2](./images/Picture4.png)
 
 One time passcode will be generated-
-![passcode](./imgages/Picture5.png)
+![passcode](./images/Picture5.png)
 
 3) Target to the Default resource group-
 ```
@@ -61,7 +61,7 @@ The region should be mentioned there .
 
 Pick that region and get the id for it from below chart-
 
-![region](./imgages/Picture6.png)
+![region](./images/Picture6.png)
 
 5)Now target your organization and space
 
@@ -78,12 +78,12 @@ Edit the name of your application according "covid19-testing..."
 
 7) Once the deployment in dcompleted, the user should be able to view below output at the end-
 
-![Output end](./imgages/Picture7.png)
+![Output end](./images/Picture7.png)
 
 The application should be build and started , displaying the url for your application .
 8) When the API is up, navigate to the Swagger API explorer at https://url/explorer.
 
-![Swagger](./imgages/Picture8.png)
+![Swagger](./images/Picture8.png)
 
 9) Now create a quiz using this JSON blob:
 ```json
@@ -99,7 +99,7 @@ The application should be build and started , displaying the url for your applic
   "quizId": 1
 }
 ```
-![Add json](./imgages/Picture9.png)
+![Add json](./images/Picture9.png)
 
 10) To be able to see the Quiz app ,access : https://url/index.html
 
