@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+memory: 256M
+metadata:
+  name: quizapp-deployment
+  labels:
+    app: quizapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quizapp
+  template:
+    metadata:
+      labels:
+        app: quizapp
+    spec:
+      containers:
+      - name: quizapp
+        memory: 256M
+        image: quay.io/nibalizer/quizapp
+        imagePullPolicy: Always
+        env:
+        - name: DEBUG
+          value: "FALSE"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quizapp
+  labels:
+    app: quizapp
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    app: quizapp
+---
+ apiVersion: networking.k8s.io/v1beta1
+ kind: Ingress
+ metadata:
+   name: covid19nolladap
+ spec:
+   rules:
+   - host: covid19-nolladap.com
+     http:
+       paths:
+       - path: /
+         backend:
+           serviceName: quizapp
+           servicePort: 3000
