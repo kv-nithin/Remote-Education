@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-memory: 256M
+memory: 128M
 metadata:
   name: quizapp-deployment
   labels:
